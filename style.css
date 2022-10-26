@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: "Roboto";
+}
+
+body {
+    background: linear-gradient(150deg, #0F2B05, #000000); 
+    text-align: center; /* Alinhar elementos que tem propriedade de texto */
+    height: 115vh; /* É necessario colocar uma altura pra ela poder preencher a página */
+}
+
+header {
+    padding: 75px 0; /* Significa que em cima e em baixo é 75px, E nas laterais seja 0 */
+}
+
+.card {
+    display: inline-block; /* Dessa maneira o card pode ser alinhado com o TEXT-ALIGN */
+    width: 354px;
+    height: 508px;
+
+    background-image: url(./imagens-projeto/Bg-Ignite.svg);
+
+    cursor: pointer; /* Vai aparecer um Dedinho para apertar o cartão */
+
+    opacity: 0;
+    transform: translate(-100px);
+    animation: appear .4s forwards; /* Vai pegar no final as animações que estão no to dentro de @keyframes appear */
+
+    user-select: none;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 115px;
+    border: 4px solid #f7dd43;
+
+    user-select: none; /* Faz com que não selecione as coisas que clicar */
+    pointer-events: none;   /* Faz com que o cursor não se perca */
+}
+
+.info {
+    margin-top: 98px;
+    font-size: 13px;
+    color: white;
+    margin-left: 70px;
+    text-align: left;
+}
+
+.info h1 {
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.info p {
+    font-size: 14px;
+    line-height: 160%;
+}
+
+
+@keyframes appear { /* Vai aplicar animação ao cartão */
+    to {
+        opacity: 1;
+        transform: translateY(0px); /* Faz o efeito de baixo para cima */
+    }
+}
